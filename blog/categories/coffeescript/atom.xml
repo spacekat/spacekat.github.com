@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CoffeeScript | jessica's blog]]></title>
+  <link href="http://spacekat.github.com/blog/categories/coffeescript/atom.xml" rel="self"/>
+  <link href="http://spacekat.github.com/"/>
+  <updated>2012-07-31T16:20:37-07:00</updated>
+  <id>http://spacekat.github.com/</id>
+  <author>
+    <name><![CDATA[Jessica Allen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hi There CoffeeScript]]></title>
+    <link href="http://spacekat.github.com/blog/2011/04/19/hi-there-coffeescript/"/>
+    <updated>2011-04-19T01:35:00-07:00</updated>
+    <id>http://spacekat.github.com/blog/2011/04/19/hi-there-coffeescript</id>
+    <content type="html"><![CDATA[<p><img src="/images/blog/textmate_coffeescript_notebook.jpeg" width="630" height="380" title="notebook love" ></p>
+
+<h2>Just like in real life, mustaches (in code) tend to make me feel a bit nauseous.</h2>
+
+<p>This is why I started having eyes for clean-shaven server side languages like Ruby and Python. If JavaScript's syntax could be similarly smooth looking, I have a feeling that my attraction to it could increase tremendously.</p>
+
+<!--more-->
+
+
+<p><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> seems to understand the appeal of white space and terseness. We started hanging out - and I don't want to jinx anything - but the attraction is undeniable. Here is how our courtship began, and how you could start a similar new relationship with <em>CoffeeScript</em> on your <em>Mac</em> that uses <em>TextMate</em>.</p>
+
+<h2>I met him through his friend, Node.js</h2>
+
+<p><em>Install Node.js and npm (node package manager)</em></p>
+
+<p>If you don't already know these dudes, follow the <a href="https://gist.github.com/579814">gist instructions</a> in the first section entitled "node-and-npm-in-30-seconds.sh" which uses cURL. I'm sure that you will get along great.</p>
+
+<h2>Our First Date.</h2>
+
+<p><em>I normally don't go for pick up lines, but there is an exception to every rule.</em></p>
+
+<p>Install CoffeeScript in the shell via npm.</p>
+
+<p><code>
+npm install coffee-script
+</code></p>
+
+<h2>Second Date.</h2>
+
+<p><em>Bundling up together.</em></p>
+
+<p>Always a gentleman, CoffeeScript offered me his jacket on a chilly night.</p>
+
+<p>This jacket didn't just make CoffeeScript syntax look nice – it could do stuff. (It didn't have quite as many magical powers as <a href="http://reyyy.com/comics/layered-jacket/">this jacket</a>, but few jackets do.)</p>
+
+<p>Install the <a href="https://github.com/jashkenas/coffee-script-tmbundle">TextMate bundle for CoffeeScript</a> so that  you can use syntax highlighting and use commands to let you run and compile things in TextMate.</p>
+
+<h3>Update the $PATH variable in TextMate</h3>
+
+<p><img src="http://www.pixelpopdev.com/wp-content/uploads/textmate_coffeescript_path2.gif" alt="Path edit in TextMate" title="textmate_coffeescript_path" width="630" height="420" class="alignnone size-full wp-image-188" /></p>
+
+<p>You want to include the <em>~/User/yourName/local/</em> directory in the <em>$PATH</em> variable in TextMate so you will be able to run "coffee" shell commands.</p>
+
+<p>Do this by opening TextMate's <em>Preferences</em>, <em>Advanced</em>, and then the <em>Shell Variables</em> section. Edit the <em>PATH</em> variable,  and add the path to your "coffee" directory (which is "/Users/yourName/local/") to the front of the :-separated list.</p>
+
+<p>After I added it, my new <em>PATH</em> looks like this.</p>
+
+<p><code>
+/Users/yourName/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+</code></p>
+
+<p>(More about this step and why it's necessary <em><a href="http://wiki.macromates.com/Troubleshooting/TextMateAndThePath">here</a></em>)</p>
+
+<h2>Third Date.</h2>
+
+<p><em>Making moves.</em></p>
+
+<p> Create a new <em>demo.coffee</em> file. Write some CoffeeScript in this new file. For example, here is a function that will test for Zac Efron's presence in a movie.</p>
+
+<p>``` javascript</p>
+
+<h1>An array of movies with Zac Efron.</h1>
+
+<p>zacMovies = [</p>
+
+<pre><code>'17 Again'
+'Hairspray'
+'High School Musical'
+'High School Musical 2'
+'High School Musical 3: Senior Year'
+'Charlie St. Cloud'
+'The Replacements'
+]
+</code></pre>
+
+<h1>Check if Zac Efron is in a movie.</h1>
+
+<p>zacEfron = (myMovie) -> if myMovie in zacMovies
+  response = "Yes, Zac Efron is in " + myMovie + "."
+else
+  response = "No, Zac Efron is not in " + myMovie + "."</p>
+
+<p>console.log zacEfron('17 Again')
+```</p>
+
+<p>Run <em>Control-R</em> to <em>Run</em> the script and open a dialog box for the console log. It should display what we already know.</p>
+
+<p><img src="http://www.pixelpopdev.com/wp-content/uploads/response.gif" alt="Of course, Zac Efron is in 17 Again" title="response" width="429" height="168" class="alignnone size-full wp-image-204" /></p>
+
+<h2>Fourth Date.</h2>
+
+<p><em>I can change him.</em></p>
+
+<p>Convert the .coffee file to raw .js. You can do this a couple of ways. If you have the CoffeeScript Bundle for Textmate installed, <em>Command-B </em>will <em>Compile and Display JS</em> in a new dialog box.</p>
+
+<p>Here's what will pop up.</p>
+
+<p>``` javascript
+var zacEfron, zacMovies;
+var __indexOf = Array.prototype.indexOf || function(item) {
+  for (var i = 0, l = this.length; i &lt; l; i++) {</p>
+
+<pre><code>if (this[i] === item) return i;
+</code></pre>
+
+<p>  }
+  return -1;
+};
+zacMovies = ['17 Again', 'Hairspray', 'High School Musical', 'High School Musical 2', 'High School Musical 3: Senior Year', 'Charlie St. Cloud', 'The Replacements'];
+zacEfron = function(myMovie) {
+  var response;
+  if (__indexOf.call(zacMovies, myMovie) >= 0) {</p>
+
+<pre><code>return response = "Yes, Zac Efron is in " + myMovie + ".";
+</code></pre>
+
+<p>  } else {</p>
+
+<pre><code>return response = "No, Zac Efron is not in " + myMovie + ".";
+</code></pre>
+
+<p>  }
+};
+console.log(zacEfron('17 Again'));
+```</p>
+
+<p>Alternatively, from the command line, run the compile command.</p>
+
+<p><code>
+coffee -c demo.coffee
+</code></p>
+
+<p>Then, peep the demo.js file that is created in the same directory as your .coffee file.</p>
+
+<h2>Fifth Date.</h2>
+
+<p><em>Lets go to the movies!</em></p>
+
+<p><a href="https://peepcode.com/products/coffeescript">PeepCode</a> has a fantastic
+film for you.</p>
+
+<p>Also, the <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript page</a> has a ton of über-cute examples.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CoffeeScript A Go Go - jessica's blog</title>
+  <meta name="author" content="Jessica Allen">
+
+  
+  <meta name="description" content="Last October, I got to speak to some women getting into development at Rails Girls
+in Helsinki, Finland. I tried to introduce the basics of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://spacekat.github.com/blog/2012/06/10/coffeescript-a-go-go/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="jessica's blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:spacekat.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a class="logo" href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archive</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">CoffeeScript a Go Go</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-10T02:11:00-07:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Last October, I got to speak to some women getting into development at <a href="http://railsgirls.com/helsinki">Rails Girls
+in Helsinki, Finland</a>.</p>
+
+<p>I tried to introduce the basics of CoffeeScript (and thusly JavaScript) the
+only way I knew how - through <em>&#8217;80s dance music</em>.</p>
+
+<!-- more -->
+
+
+<p>Here are some of the demos that everyone worked on as they wrote their
+first CoffeeScript!</p>
+
+<h2>Simple data storage (Variables, Strings, Numbers)</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// String assignment</span>
+</span><span class='line'><span class="nx">theSingle</span> <span class="o">=</span> <span class="s2">&quot;Video Killed the Radio Star&quot;</span>
+</span><span class='line'><span class="nx">theBand</span> <span class="o">=</span> <span class="s2">&quot;The Buggles&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Numbers</span>
+</span><span class='line'><span class="nx">mtvMusicVideoDebut</span> <span class="o">=</span> <span class="mi">1981</span>
+</span><span class='line'><span class="nx">billboardPosition</span> <span class="o">=</span> <span class="mi">40</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// String Interpolation</span>
+</span><span class='line'><span class="nx">alert</span>  <span class="s2">&quot;//{ theSingle } by //{ theBand }&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Functions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Anonymous function</span>
+</span><span class='line'><span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="s2">&quot;I love rock-n-roll&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Named Function</span>
+</span><span class='line'><span class="nx">singIt</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="s2">&quot;I love rock-n-roll!&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Calling a function</span>
+</span><span class='line'><span class="nx">singIt</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Passing a variable</span>
+</span><span class='line'><span class="nx">singSomethingElse</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lyrics</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="nx">lyrics</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">singSomethingElse</span> <span class="s2">&quot;Don&#39;t go wasting your emotion&quot;</span>
+</span><span class='line'><span class="nx">singSomethingElse</span> <span class="s2">&quot;Lay all your love on me&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Passing many variables</span>
+</span><span class='line'><span class="nx">manyLines</span> <span class="o">=</span> <span class="p">(</span><span class="nx">chorusLineOne</span><span class="p">,</span> <span class="nx">chorusLineTwo</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="nx">chorusLineOne</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="nx">chorusLineTwo</span>
+</span><span class='line'>  <span class="nx">singIt</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">chorusLineOne</span> <span class="o">=</span> <span class="s2">&quot;Don&#39;t go wasting your emotion&quot;</span>
+</span><span class='line'><span class="nx">chorusLineTwo</span> <span class="o">=</span> <span class="s2">&quot;Lay all your love on me&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">manyLines</span><span class="p">(</span><span class="nx">chorusLineOne</span><span class="p">,</span><span class="nx">chorusLineTwo</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Objects and Comprehensions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Key : Value pairs</span>
+</span><span class='line'><span class="nx">quiteMoody</span> <span class="o">=</span>
+</span><span class='line'>  <span class="nx">monday</span><span class="o">:</span> <span class="s2">&quot;feel blue&quot;</span>
+</span><span class='line'>  <span class="nx">tuesday</span><span class="o">:</span> <span class="s2">&quot;feel gray&quot;</span>
+</span><span class='line'>  <span class="nx">wednesday</span><span class="o">:</span> <span class="s2">&quot;feel gray again&quot;</span>
+</span><span class='line'>  <span class="nx">thursday</span><span class="o">:</span> <span class="s2">&quot;do not care about you&quot;</span>
+</span><span class='line'>  <span class="nx">friday</span><span class="o">:</span> <span class="s2">&quot;am in love&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Accessing individual values</span>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">quiteMoody</span><span class="p">.</span><span class="nx">tuesday</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Go over the object with for i, j of</span>
+</span><span class='line'><span class="nx">feelings</span> <span class="o">=</span> <span class="k">for</span> <span class="nx">day</span><span class="p">,</span> <span class="nx">mood</span> <span class="nx">of</span> <span class="nx">quiteMoody</span>
+</span><span class='line'>  <span class="s2">&quot;On //{day} I //{mood}&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Returning the value of the comprension</span>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">feelings</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Arrays and Comprehensions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Array brackets</span>
+</span><span class='line'><span class="nx">tracks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="s2">&quot;One More Chance&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;What Have I Done to Deserve This?&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Shopping&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Rent&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Hit Music&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;It Couldn&#39;t Happen Here&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;It&#39;s a Sin&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;I Want to Wake Up&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Heart&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;King&#39;s Cross&quot;</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Array comprehension returns another array</span>
+</span><span class='line'><span class="nx">shortTrackNames</span> <span class="o">=</span> <span class="p">(</span><span class="nx">trackName</span> <span class="k">for</span> <span class="nx">trackName</span> <span class="k">in</span> <span class="nx">tracks</span> <span class="nx">when</span> <span class="nx">name</span><span class="p">.</span><span class="nx">length</span> <span class="mi">10</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">shortTrackNames</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Conditions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// if, is, else...</span>
+</span><span class='line'><span class="nx">firstRequest</span> <span class="o">=</span> <span class="p">(</span><span class="nx">album</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="nx">album</span> <span class="nx">is</span> <span class="s2">&quot;London Calling&quot;</span>
+</span><span class='line'>    <span class="s2">&quot;The Guns of Brixton&quot;</span>
+</span><span class='line'>  <span class="k">else</span> <span class="k">if</span> <span class="nx">album</span> <span class="nx">is</span> <span class="s2">&quot;Talk Talk Talk&quot;</span>
+</span><span class='line'>    <span class="s2">&quot;Pretty in Pink&quot;</span>
+</span><span class='line'>  <span class="k">else</span> <span class="k">if</span> <span class="nx">album</span> <span class="nx">is</span> <span class="s2">&quot;The Circus&quot;</span>
+</span><span class='line'>    <span class="s2">&quot;Sometimes&quot;</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="s2">&quot;put your iPod on shuffle&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">firstRequest</span><span class="p">(</span><span class="s2">&quot;The Circus&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>More Conditions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// yes, no, true, false</span>
+</span><span class='line'><span class="nx">youNeedAFriend</span> <span class="o">=</span> <span class="nx">yes</span>
+</span><span class='line'><span class="nx">lookToAStranger</span> <span class="o">=</span> <span class="nx">no</span>
+</span><span class='line'><span class="k">if</span> <span class="nx">youNeedAFriend</span> <span class="nx">is</span> <span class="kc">true</span> <span class="nx">and</span> <span class="nx">lookToAStranger</span> <span class="nx">is</span> <span class="kc">false</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="s2">&quot;I will be there&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Pattern Matching</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// It looks like an array, but it&#39;s not! </span>
+</span><span class='line'><span class="c1">// The left side is definine a pattern of variable to match with the values on the right side.</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">middle</span><span class="p">,</span> <span class="nx">last</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Steven&quot;</span><span class="p">,</span> <span class="s2">&quot;Patrick&quot;</span><span class="p">,</span> <span class="s2">&quot;Morrissey&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">firstName</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nx">middle</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nx">last</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Referencing the same variable on either side</span>
+</span><span class='line'><span class="nx">bassistShoes</span> <span class="o">=</span> <span class="s2">&quot;Chucks&quot;</span>
+</span><span class='line'><span class="nx">drummerShoes</span> <span class="o">=</span> <span class="s2">&quot;Vans&quot;</span>
+</span><span class='line'><span class="p">[</span><span class="nx">bassistShoes</span><span class="p">,</span> <span class="nx">drummerShoes</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">drummerShoes</span><span class="p">,</span> <span class="nx">bassistShoes</span><span class="p">]</span>
+</span><span class='line'><span class="nx">alert</span> <span class="s2">&quot;The drummer is wearing //{ drummerShoes }.&quot;</span>
+</span><span class='line'><span class="nx">alert</span> <span class="s2">&quot;The bassist is wearing //{ bassistShoes }.&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jessica Allen</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-10T02:11:00-07:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://spacekat.github.com/blog/2012/06/10/coffeescript-a-go-go/" data-via="jessicaspacekat" data-counturl="http://spacekat.github.com/blog/2012/06/10/coffeescript-a-go-go/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/04/19/hi-there-coffeescript/" title="Previous Post: Hi There CoffeeScript">&laquo; Hi There CoffeeScript</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/10/coffeescript-a-go-go/">CoffeeScript A Go Go</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/19/hi-there-coffeescript/">Hi There CoffeeScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/">A minimal WordPress site based on TwentyTen Five</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/12/14/rilakkuma-in-css3/">Rilakkuma in CSS3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/12/12/useful-shortcuts-for-textmate/">Useful Shortcuts for TextMate</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("jessicaspacekat", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/jessicaspacekat" class="twitter-follow-button" data-show-count="false">Follow @jessicaspacekat</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div class="copyright">
+  <p>
+    Copyright &copy; 2012 - Jessica Allen
+  </p>
+</div>
+<div class="credits">
+  <p>
+    <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  </p>
+</div>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

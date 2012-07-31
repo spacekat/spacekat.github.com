@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: css | jessica's blog]]></title>
+  <link href="http://spacekat.github.com/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://spacekat.github.com/"/>
+  <updated>2012-07-31T16:20:37-07:00</updated>
+  <id>http://spacekat.github.com/</id>
+  <author>
+    <name><![CDATA[Jessica Allen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rilakkuma in CSS3]]></title>
+    <link href="http://spacekat.github.com/blog/2010/12/14/rilakkuma-in-css3/"/>
+    <updated>2010-12-14T23:52:00-08:00</updated>
+    <id>http://spacekat.github.com/blog/2010/12/14/rilakkuma-in-css3</id>
+    <content type="html"><![CDATA[<p><img src="/images/blog/rilakkuma_screenshots.gif" width="630" height="269" title="Rilakkuma Screenshots" ></p>
+
+<p>I like how San-X characters (like Rilakkuma and Ko-Rilakkuma) are very simple, and yet manage to look very cute. It must be in the proportions (massive foreheads, wide-set eyes, etc.) and smooth shapes.</p>
+
+<p>I tried to recreate Rilakkuma’s face in using the CSS properties border-radius and transform.</p>
+
+<!--more-->
+
+
+<h2>Live demo</h2>
+
+<p>Here is Rilakkuma:
+<iframe style="width: 100%; height: 500px" src="http://jsfiddle.net/kAaDP/embedded/result,html,css/light/"></iframe></p>
+
+<p>Of course I had to make his friend with the red button, Ko-Rilakkuma, too:
+<iframe style="width: 100%; height: 500px" src="http://jsfiddle.net/UUZ9W/embedded/result,html,css/light/"></iframe></p>
+
+<h2>A curvy snout with border-radius</h2>
+
+<p>For Rilakkuma’s white snout, I used with the border-radius property to create the downward slope on the top curve.</p>
+
+<p>The radius values are defined clockwise, starting at the top-left corner. The first four values are the horizontal radii, and second four following the slash are the the vertical radii.</p>
+
+<p><code>css
+border-radius: 200px 200px 140px 140px / 160px 160px 140px 140px;
+</code></p>
+
+<p>Notice how the first two border-radius definitions (top-left and top-right, both 200px) are longer than the following two definitions (bottom-right and bottom-left, both140px)</p>
+
+<h2>Rotation points with transform</h2>
+
+<p>I used transform to make the upside-down “V”-shaped mouth. I made two rectangular lips, rounded their edges, and then rotated them at the nose. To define the rotation point, I used transform-origin. Then transform specifies the degrees.</p>
+
+<h2>Browser compatibility</h2>
+
+<p>These bears should work in current -webkit, -o, and -moz browsers, but sadly, not IE. It looks like IE9 beta should support it.</p>
+
+<p><em>Supported in:</em>
+Opera (version 10.5+)
+Safari (version 4+)
+Chrome (version 5+)
+Mozilla Firefox (version 1.0+)</p>
+
+<p>Here is an IE8 screenshot. Oh no, it’s Robo-Ko-Rilakkuma!
+<img src="/images/blog/ko-rilakkuma-ie8.gif" width="630" height="269" title="Rilakkuma Screenshots" ></p>
+]]></content>
+  </entry>
+  
+</feed>

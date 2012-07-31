@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Hi There CoffeeScript - jessica's blog</title>
+  <meta name="author" content="Jessica Allen">
+
+  
+  <meta name="description" content="Just like in real life, mustaches (in code) tend to make me feel a bit nauseous. This is why I started having eyes for clean-shaven server side &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://spacekat.github.com/blog/2011/04/19/hi-there-coffeescript/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="jessica's blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:spacekat.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a class="logo" href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archive</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Hi There CoffeeScript</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-19T01:35:00-07:00" pubdate data-updated="true">Apr 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img src="/images/blog/textmate_coffeescript_notebook.jpeg" width="630" height="380" title="notebook love" ></p>
+
+<h2>Just like in real life, mustaches (in code) tend to make me feel a bit nauseous.</h2>
+
+<p>This is why I started having eyes for clean-shaven server side languages like Ruby and Python. If JavaScript&#8217;s syntax could be similarly smooth looking, I have a feeling that my attraction to it could increase tremendously.</p>
+
+<!--more-->
+
+
+<p><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> seems to understand the appeal of white space and terseness. We started hanging out - and I don&#8217;t want to jinx anything - but the attraction is undeniable. Here is how our courtship began, and how you could start a similar new relationship with <em>CoffeeScript</em> on your <em>Mac</em> that uses <em>TextMate</em>.</p>
+
+<h2>I met him through his friend, Node.js</h2>
+
+<p><em>Install Node.js and npm (node package manager)</em></p>
+
+<p>If you don&#8217;t already know these dudes, follow the <a href="https://gist.github.com/579814">gist instructions</a> in the first section entitled &#8220;node-and-npm-in-30-seconds.sh&#8221; which uses cURL. I&#8217;m sure that you will get along great.</p>
+
+<h2>Our First Date.</h2>
+
+<p><em>I normally don&#8217;t go for pick up lines, but there is an exception to every rule.</em></p>
+
+<p>Install CoffeeScript in the shell via npm.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install coffee-script</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Second Date.</h2>
+
+<p><em>Bundling up together.</em></p>
+
+<p>Always a gentleman, CoffeeScript offered me his jacket on a chilly night.</p>
+
+<p>This jacket didn&#8217;t just make CoffeeScript syntax look nice – it could do stuff. (It didn&#8217;t have quite as many magical powers as <a href="http://reyyy.com/comics/layered-jacket/">this jacket</a>, but few jackets do.)</p>
+
+<p>Install the <a href="https://github.com/jashkenas/coffee-script-tmbundle">TextMate bundle for CoffeeScript</a> so that  you can use syntax highlighting and use commands to let you run and compile things in TextMate.</p>
+
+<h3>Update the $PATH variable in TextMate</h3>
+
+<p><img src="http://www.pixelpopdev.com/wp-content/uploads/textmate_coffeescript_path2.gif" alt="Path edit in TextMate" title="textmate_coffeescript_path" width="630" height="420" class="alignnone size-full wp-image-188" /></p>
+
+<p>You want to include the <em>~/User/yourName/local/</em> directory in the <em>$PATH</em> variable in TextMate so you will be able to run &#8220;coffee&#8221; shell commands.</p>
+
+<p>Do this by opening TextMate&#8217;s <em>Preferences</em>, <em>Advanced</em>, and then the <em>Shell Variables</em> section. Edit the <em>PATH</em> variable,  and add the path to your &#8220;coffee&#8221; directory (which is &#8220;/Users/yourName/local/&#8221;) to the front of the :-separated list.</p>
+
+<p>After I added it, my new <em>PATH</em> looks like this.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/Users/yourName/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(More about this step and why it&#8217;s necessary <em><a href="http://wiki.macromates.com/Troubleshooting/TextMateAndThePath">here</a></em>)</p>
+
+<h2>Third Date.</h2>
+
+<p><em>Making moves.</em></p>
+
+<p> Create a new <em>demo.coffee</em> file. Write some CoffeeScript in this new file. For example, here is a function that will test for Zac Efron&#8217;s presence in a movie.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">#</span> <span class="nx">An</span> <span class="nx">array</span> <span class="nx">of</span> <span class="nx">movies</span> <span class="kd">with</span> <span class="nx">Zac</span> <span class="nx">Efron</span><span class="p">.</span>
+</span><span class='line'><span class="nx">zacMovies</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="s1">&#39;17 Again&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;Hairspray&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;High School Musical&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;High School Musical 2&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;High School Musical 3: Senior Year&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;Charlie St. Cloud&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;The Replacements&#39;</span>
+</span><span class='line'>  <span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Check</span> <span class="k">if</span> <span class="nx">Zac</span> <span class="nx">Efron</span> <span class="nx">is</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">movie</span><span class="p">.</span>
+</span><span class='line'><span class="nx">zacEfron</span> <span class="o">=</span> <span class="p">(</span><span class="nx">myMovie</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">if</span> <span class="nx">myMovie</span> <span class="k">in</span> <span class="nx">zacMovies</span>
+</span><span class='line'>  <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Yes, Zac Efron is in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'>  <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;No, Zac Efron is not in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">zacEfron</span><span class="p">(</span><span class="s1">&#39;17 Again&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run <em>Control-R</em> to <em>Run</em> the script and open a dialog box for the console log. It should display what we already know.</p>
+
+<p><img src="http://www.pixelpopdev.com/wp-content/uploads/response.gif" alt="Of course, Zac Efron is in 17 Again" title="response" width="429" height="168" class="alignnone size-full wp-image-204" /></p>
+
+<h2>Fourth Date.</h2>
+
+<p><em>I can change him.</em></p>
+
+<p>Convert the .coffee file to raw .js. You can do this a couple of ways. If you have the CoffeeScript Bundle for Textmate installed, <em>Command-B </em>will <em>Compile and Display JS</em> in a new dialog box.</p>
+
+<p>Here&#8217;s what will pop up.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">zacEfron</span><span class="p">,</span> <span class="nx">zacMovies</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">__indexOf</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">indexOf</span> <span class="o">||</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="nx">item</span><span class="p">)</span> <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">zacMovies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;17 Again&#39;</span><span class="p">,</span> <span class="s1">&#39;Hairspray&#39;</span><span class="p">,</span> <span class="s1">&#39;High School Musical&#39;</span><span class="p">,</span> <span class="s1">&#39;High School Musical 2&#39;</span><span class="p">,</span> <span class="s1">&#39;High School Musical 3: Senior Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie St. Cloud&#39;</span><span class="p">,</span> <span class="s1">&#39;The Replacements&#39;</span><span class="p">];</span>
+</span><span class='line'><span class="nx">zacEfron</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">myMovie</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">response</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">__indexOf</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">zacMovies</span><span class="p">,</span> <span class="nx">myMovie</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Yes, Zac Efron is in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;No, Zac Efron is not in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">zacEfron</span><span class="p">(</span><span class="s1">&#39;17 Again&#39;</span><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternatively, from the command line, run the compile command.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">coffee</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">demo</span><span class="p">.</span><span class="nx">coffee</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, peep the demo.js file that is created in the same directory as your .coffee file.</p>
+
+<h2>Fifth Date.</h2>
+
+<p><em>Lets go to the movies!</em></p>
+
+<p><a href="https://peepcode.com/products/coffeescript">PeepCode</a> has a fantastic
+film for you.</p>
+
+<p>Also, the <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript page</a> has a ton of über-cute examples.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jessica Allen</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-19T01:35:00-07:00" pubdate data-updated="true">Apr 19<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/coffeescript/'>CoffeeScript</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://spacekat.github.com/blog/2011/04/19/hi-there-coffeescript/" data-via="jessicaspacekat" data-counturl="http://spacekat.github.com/blog/2011/04/19/hi-there-coffeescript/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/" title="Previous Post: A minimal WordPress site based on TwentyTen Five">&laquo; A minimal WordPress site based on TwentyTen Five</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/06/10/coffeescript-a-go-go/" title="Next Post: CoffeeScript A Go Go">CoffeeScript A Go Go &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/10/coffeescript-a-go-go/">CoffeeScript A Go Go</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/19/hi-there-coffeescript/">Hi There CoffeeScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/">A minimal WordPress site based on TwentyTen Five</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/12/14/rilakkuma-in-css3/">Rilakkuma in CSS3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/12/12/useful-shortcuts-for-textmate/">Useful Shortcuts for TextMate</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("jessicaspacekat", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/jessicaspacekat" class="twitter-follow-button" data-show-count="false">Follow @jessicaspacekat</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div class="copyright">
+  <p>
+    Copyright &copy; 2012 - Jessica Allen
+  </p>
+</div>
+<div class="credits">
+  <p>
+    <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  </p>
+</div>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

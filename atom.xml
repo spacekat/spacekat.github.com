@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[jessica's blog]]></title>
+  <link href="http://spacekat.github.com/atom.xml" rel="self"/>
+  <link href="http://spacekat.github.com/"/>
+  <updated>2012-07-31T16:20:37-07:00</updated>
+  <id>http://spacekat.github.com/</id>
+  <author>
+    <name><![CDATA[Jessica Allen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CoffeeScript A Go Go]]></title>
+    <link href="http://spacekat.github.com/blog/2012/06/10/coffeescript-a-go-go/"/>
+    <updated>2012-06-10T02:11:00-07:00</updated>
+    <id>http://spacekat.github.com/blog/2012/06/10/coffeescript-a-go-go</id>
+    <content type="html"><![CDATA[<p>Last October, I got to speak to some women getting into development at <a href="http://railsgirls.com/helsinki">Rails Girls
+in Helsinki, Finland</a>.</p>
+
+<p>I tried to introduce the basics of CoffeeScript (and thusly JavaScript) the
+only way I knew how - through <em>&#8217;80s dance music</em>.</p>
+
+<!-- more -->
+
+
+<p>Here are some of the demos that everyone worked on as they wrote their
+first CoffeeScript!</p>
+
+<h2>Simple data storage (Variables, Strings, Numbers)</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// String assignment</span>
+</span><span class='line'><span class="nx">theSingle</span> <span class="o">=</span> <span class="s2">&quot;Video Killed the Radio Star&quot;</span>
+</span><span class='line'><span class="nx">theBand</span> <span class="o">=</span> <span class="s2">&quot;The Buggles&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Numbers</span>
+</span><span class='line'><span class="nx">mtvMusicVideoDebut</span> <span class="o">=</span> <span class="mi">1981</span>
+</span><span class='line'><span class="nx">billboardPosition</span> <span class="o">=</span> <span class="mi">40</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// String Interpolation</span>
+</span><span class='line'><span class="nx">alert</span>  <span class="s2">&quot;//{ theSingle } by //{ theBand }&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Functions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Anonymous function</span>
+</span><span class='line'><span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="s2">&quot;I love rock-n-roll&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Named Function</span>
+</span><span class='line'><span class="nx">singIt</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="s2">&quot;I love rock-n-roll!&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Calling a function</span>
+</span><span class='line'><span class="nx">singIt</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Passing a variable</span>
+</span><span class='line'><span class="nx">singSomethingElse</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lyrics</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="nx">lyrics</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">singSomethingElse</span> <span class="s2">&quot;Don&#39;t go wasting your emotion&quot;</span>
+</span><span class='line'><span class="nx">singSomethingElse</span> <span class="s2">&quot;Lay all your love on me&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Passing many variables</span>
+</span><span class='line'><span class="nx">manyLines</span> <span class="o">=</span> <span class="p">(</span><span class="nx">chorusLineOne</span><span class="p">,</span> <span class="nx">chorusLineTwo</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="nx">chorusLineOne</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="nx">chorusLineTwo</span>
+</span><span class='line'>  <span class="nx">singIt</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">chorusLineOne</span> <span class="o">=</span> <span class="s2">&quot;Don&#39;t go wasting your emotion&quot;</span>
+</span><span class='line'><span class="nx">chorusLineTwo</span> <span class="o">=</span> <span class="s2">&quot;Lay all your love on me&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">manyLines</span><span class="p">(</span><span class="nx">chorusLineOne</span><span class="p">,</span><span class="nx">chorusLineTwo</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Objects and Comprehensions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Key : Value pairs</span>
+</span><span class='line'><span class="nx">quiteMoody</span> <span class="o">=</span>
+</span><span class='line'>  <span class="nx">monday</span><span class="o">:</span> <span class="s2">&quot;feel blue&quot;</span>
+</span><span class='line'>  <span class="nx">tuesday</span><span class="o">:</span> <span class="s2">&quot;feel gray&quot;</span>
+</span><span class='line'>  <span class="nx">wednesday</span><span class="o">:</span> <span class="s2">&quot;feel gray again&quot;</span>
+</span><span class='line'>  <span class="nx">thursday</span><span class="o">:</span> <span class="s2">&quot;do not care about you&quot;</span>
+</span><span class='line'>  <span class="nx">friday</span><span class="o">:</span> <span class="s2">&quot;am in love&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Accessing individual values</span>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">quiteMoody</span><span class="p">.</span><span class="nx">tuesday</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Go over the object with for i, j of</span>
+</span><span class='line'><span class="nx">feelings</span> <span class="o">=</span> <span class="k">for</span> <span class="nx">day</span><span class="p">,</span> <span class="nx">mood</span> <span class="nx">of</span> <span class="nx">quiteMoody</span>
+</span><span class='line'>  <span class="s2">&quot;On //{day} I //{mood}&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Returning the value of the comprension</span>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">feelings</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Arrays and Comprehensions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Array brackets</span>
+</span><span class='line'><span class="nx">tracks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="s2">&quot;One More Chance&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;What Have I Done to Deserve This?&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Shopping&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Rent&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Hit Music&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;It Couldn&#39;t Happen Here&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;It&#39;s a Sin&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;I Want to Wake Up&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;Heart&quot;</span>
+</span><span class='line'>  <span class="s2">&quot;King&#39;s Cross&quot;</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Array comprehension returns another array</span>
+</span><span class='line'><span class="nx">shortTrackNames</span> <span class="o">=</span> <span class="p">(</span><span class="nx">trackName</span> <span class="k">for</span> <span class="nx">trackName</span> <span class="k">in</span> <span class="nx">tracks</span> <span class="nx">when</span> <span class="nx">name</span><span class="p">.</span><span class="nx">length</span> <span class="mi">10</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">shortTrackNames</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Conditions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// if, is, else...</span>
+</span><span class='line'><span class="nx">firstRequest</span> <span class="o">=</span> <span class="p">(</span><span class="nx">album</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="nx">album</span> <span class="nx">is</span> <span class="s2">&quot;London Calling&quot;</span>
+</span><span class='line'>    <span class="s2">&quot;The Guns of Brixton&quot;</span>
+</span><span class='line'>  <span class="k">else</span> <span class="k">if</span> <span class="nx">album</span> <span class="nx">is</span> <span class="s2">&quot;Talk Talk Talk&quot;</span>
+</span><span class='line'>    <span class="s2">&quot;Pretty in Pink&quot;</span>
+</span><span class='line'>  <span class="k">else</span> <span class="k">if</span> <span class="nx">album</span> <span class="nx">is</span> <span class="s2">&quot;The Circus&quot;</span>
+</span><span class='line'>    <span class="s2">&quot;Sometimes&quot;</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="s2">&quot;put your iPod on shuffle&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">firstRequest</span><span class="p">(</span><span class="s2">&quot;The Circus&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>More Conditions</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// yes, no, true, false</span>
+</span><span class='line'><span class="nx">youNeedAFriend</span> <span class="o">=</span> <span class="nx">yes</span>
+</span><span class='line'><span class="nx">lookToAStranger</span> <span class="o">=</span> <span class="nx">no</span>
+</span><span class='line'><span class="k">if</span> <span class="nx">youNeedAFriend</span> <span class="nx">is</span> <span class="kc">true</span> <span class="nx">and</span> <span class="nx">lookToAStranger</span> <span class="nx">is</span> <span class="kc">false</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="s2">&quot;I will be there&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Pattern Matching</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// It looks like an array, but it&#39;s not! </span>
+</span><span class='line'><span class="c1">// The left side is definine a pattern of variable to match with the values on the right side.</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">middle</span><span class="p">,</span> <span class="nx">last</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Steven&quot;</span><span class="p">,</span> <span class="s2">&quot;Patrick&quot;</span><span class="p">,</span> <span class="s2">&quot;Morrissey&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="nx">alert</span> <span class="nx">firstName</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nx">middle</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nx">last</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Referencing the same variable on either side</span>
+</span><span class='line'><span class="nx">bassistShoes</span> <span class="o">=</span> <span class="s2">&quot;Chucks&quot;</span>
+</span><span class='line'><span class="nx">drummerShoes</span> <span class="o">=</span> <span class="s2">&quot;Vans&quot;</span>
+</span><span class='line'><span class="p">[</span><span class="nx">bassistShoes</span><span class="p">,</span> <span class="nx">drummerShoes</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">drummerShoes</span><span class="p">,</span> <span class="nx">bassistShoes</span><span class="p">]</span>
+</span><span class='line'><span class="nx">alert</span> <span class="s2">&quot;The drummer is wearing //{ drummerShoes }.&quot;</span>
+</span><span class='line'><span class="nx">alert</span> <span class="s2">&quot;The bassist is wearing //{ bassistShoes }.&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hi There CoffeeScript]]></title>
+    <link href="http://spacekat.github.com/blog/2011/04/19/hi-there-coffeescript/"/>
+    <updated>2011-04-19T01:35:00-07:00</updated>
+    <id>http://spacekat.github.com/blog/2011/04/19/hi-there-coffeescript</id>
+    <content type="html"><![CDATA[<p><img src="http://spacekat.github.com/images/blog/textmate_coffeescript_notebook.jpeg" width="630" height="380" title="notebook love" ></p>
+
+<h2>Just like in real life, mustaches (in code) tend to make me feel a bit nauseous.</h2>
+
+<p>This is why I started having eyes for clean-shaven server side languages like Ruby and Python. If JavaScript&#8217;s syntax could be similarly smooth looking, I have a feeling that my attraction to it could increase tremendously.</p>
+
+<!--more-->
+
+
+<p><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> seems to understand the appeal of white space and terseness. We started hanging out - and I don&#8217;t want to jinx anything - but the attraction is undeniable. Here is how our courtship began, and how you could start a similar new relationship with <em>CoffeeScript</em> on your <em>Mac</em> that uses <em>TextMate</em>.</p>
+
+<h2>I met him through his friend, Node.js</h2>
+
+<p><em>Install Node.js and npm (node package manager)</em></p>
+
+<p>If you don&#8217;t already know these dudes, follow the <a href="https://gist.github.com/579814">gist instructions</a> in the first section entitled &#8220;node-and-npm-in-30-seconds.sh&#8221; which uses cURL. I&#8217;m sure that you will get along great.</p>
+
+<h2>Our First Date.</h2>
+
+<p><em>I normally don&#8217;t go for pick up lines, but there is an exception to every rule.</em></p>
+
+<p>Install CoffeeScript in the shell via npm.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install coffee-script</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Second Date.</h2>
+
+<p><em>Bundling up together.</em></p>
+
+<p>Always a gentleman, CoffeeScript offered me his jacket on a chilly night.</p>
+
+<p>This jacket didn&#8217;t just make CoffeeScript syntax look nice – it could do stuff. (It didn&#8217;t have quite as many magical powers as <a href="http://reyyy.com/comics/layered-jacket/">this jacket</a>, but few jackets do.)</p>
+
+<p>Install the <a href="https://github.com/jashkenas/coffee-script-tmbundle">TextMate bundle for CoffeeScript</a> so that  you can use syntax highlighting and use commands to let you run and compile things in TextMate.</p>
+
+<h3>Update the $PATH variable in TextMate</h3>
+
+<p><img src="http://www.pixelpopdev.com/wp-content/uploads/textmate_coffeescript_path2.gif" alt="Path edit in TextMate" title="textmate_coffeescript_path" width="630" height="420" class="alignnone size-full wp-image-188" /></p>
+
+<p>You want to include the <em>~/User/yourName/local/</em> directory in the <em>$PATH</em> variable in TextMate so you will be able to run &#8220;coffee&#8221; shell commands.</p>
+
+<p>Do this by opening TextMate&#8217;s <em>Preferences</em>, <em>Advanced</em>, and then the <em>Shell Variables</em> section. Edit the <em>PATH</em> variable,  and add the path to your &#8220;coffee&#8221; directory (which is &#8220;/Users/yourName/local/&#8221;) to the front of the :-separated list.</p>
+
+<p>After I added it, my new <em>PATH</em> looks like this.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/Users/yourName/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(More about this step and why it&#8217;s necessary <em><a href="http://wiki.macromates.com/Troubleshooting/TextMateAndThePath">here</a></em>)</p>
+
+<h2>Third Date.</h2>
+
+<p><em>Making moves.</em></p>
+
+<p> Create a new <em>demo.coffee</em> file. Write some CoffeeScript in this new file. For example, here is a function that will test for Zac Efron&#8217;s presence in a movie.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">#</span> <span class="nx">An</span> <span class="nx">array</span> <span class="nx">of</span> <span class="nx">movies</span> <span class="kd">with</span> <span class="nx">Zac</span> <span class="nx">Efron</span><span class="p">.</span>
+</span><span class='line'><span class="nx">zacMovies</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="s1">&#39;17 Again&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;Hairspray&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;High School Musical&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;High School Musical 2&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;High School Musical 3: Senior Year&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;Charlie St. Cloud&#39;</span>
+</span><span class='line'>  <span class="s1">&#39;The Replacements&#39;</span>
+</span><span class='line'>  <span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Check</span> <span class="k">if</span> <span class="nx">Zac</span> <span class="nx">Efron</span> <span class="nx">is</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">movie</span><span class="p">.</span>
+</span><span class='line'><span class="nx">zacEfron</span> <span class="o">=</span> <span class="p">(</span><span class="nx">myMovie</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">if</span> <span class="nx">myMovie</span> <span class="k">in</span> <span class="nx">zacMovies</span>
+</span><span class='line'>  <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Yes, Zac Efron is in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'>  <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;No, Zac Efron is not in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">zacEfron</span><span class="p">(</span><span class="s1">&#39;17 Again&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run <em>Control-R</em> to <em>Run</em> the script and open a dialog box for the console log. It should display what we already know.</p>
+
+<p><img src="http://www.pixelpopdev.com/wp-content/uploads/response.gif" alt="Of course, Zac Efron is in 17 Again" title="response" width="429" height="168" class="alignnone size-full wp-image-204" /></p>
+
+<h2>Fourth Date.</h2>
+
+<p><em>I can change him.</em></p>
+
+<p>Convert the .coffee file to raw .js. You can do this a couple of ways. If you have the CoffeeScript Bundle for Textmate installed, <em>Command-B </em>will <em>Compile and Display JS</em> in a new dialog box.</p>
+
+<p>Here&#8217;s what will pop up.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">zacEfron</span><span class="p">,</span> <span class="nx">zacMovies</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">__indexOf</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">indexOf</span> <span class="o">||</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="nx">item</span><span class="p">)</span> <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">zacMovies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;17 Again&#39;</span><span class="p">,</span> <span class="s1">&#39;Hairspray&#39;</span><span class="p">,</span> <span class="s1">&#39;High School Musical&#39;</span><span class="p">,</span> <span class="s1">&#39;High School Musical 2&#39;</span><span class="p">,</span> <span class="s1">&#39;High School Musical 3: Senior Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie St. Cloud&#39;</span><span class="p">,</span> <span class="s1">&#39;The Replacements&#39;</span><span class="p">];</span>
+</span><span class='line'><span class="nx">zacEfron</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">myMovie</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">response</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">__indexOf</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">zacMovies</span><span class="p">,</span> <span class="nx">myMovie</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Yes, Zac Efron is in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;No, Zac Efron is not in &quot;</span> <span class="o">+</span> <span class="nx">myMovie</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">zacEfron</span><span class="p">(</span><span class="s1">&#39;17 Again&#39;</span><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternatively, from the command line, run the compile command.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">coffee</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">demo</span><span class="p">.</span><span class="nx">coffee</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, peep the demo.js file that is created in the same directory as your .coffee file.</p>
+
+<h2>Fifth Date.</h2>
+
+<p><em>Lets go to the movies!</em></p>
+
+<p><a href="https://peepcode.com/products/coffeescript">PeepCode</a> has a fantastic
+film for you.</p>
+
+<p>Also, the <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript page</a> has a ton of über-cute examples.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A minimal WordPress site based on TwentyTen Five]]></title>
+    <link href="http://spacekat.github.com/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/"/>
+    <updated>2011-03-11T00:49:00-08:00</updated>
+    <id>http://spacekat.github.com/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five</id>
+    <content type="html"><![CDATA[<p><img src="http://spacekat.github.com/images/blog/sockcandy_screenshot.jpeg" width="630" height="425" title="Sock Candy screenshots" ></p>
+
+<p><em>This WordPress theme is used for <a href="http://www.sockcandy.com/">www.sockcandy.com</a>.</em></p>
+
+<p>For a recent WordPress blog that I designed, I used a free HTML5-enhanced basic template called <strong>TwentyTenFive</strong> as a starting point for the theme.</p>
+
+<!--more-->
+
+
+<h2>Resources</h2>
+
+
+<p>The <strong>TwentyTenFive</strong> theme is downloadable here: <a href="http://www.twentytenfive.com/">www.twentytenfive.com</a></p>
+
+<p>Here is a <a href="http://www.smashingmagazine.com/2011/02/22/using-html5-to-transform-wordpress-twentyten-theme/">Smashing Magazine article</a> describing the features of this theme.</p>
+
+<h2>Theme HTML changes</h2>
+
+
+<p>I only needed to make a few changes to the basic <strong>TwentyTenFive</strong> template files to adjust this default theme to the layout for my site. The major changes included removing the masthead (part of header.php), moving the sidebar to the left (in index.php), and customizing the menu systems in the sidebar (in sidebar.php).</p>
+
+<h2>Housekeeping</h2>
+
+
+<p>I went through and removed some of the unsavory default aspects of <strong>TwentyTen</strong>, such as the left and right HTML arrows (← →«»). Ew, gross!</p>
+
+<h2>Simple page titles</h2>
+
+
+<p>I changed the page &lt;title&gt; to lowercase, and formatted it so that it wouldn&#8217;t have any arrows or divider lines. The title displays like this:</p>
+
+<p><strong>page name. blog name. page number.</strong></p>
+
+<p>or, if you are on the homepage:</p>
+
+<p><strong>blog name. tagline. page number.</strong></p>
+
+<p>If you would like to do something similar, open the header.php file, and edit inside the &lt;title&gt; tag.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">/*</span>
+</span><span class='line'><span class="x">* Print the tag based on what is being viewed.</span>
+</span><span class='line'><span class="x">*/</span>
+</span><span class='line'><span class="x">global $page, $paged;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add the page name.</span>
+</span><span class='line'><span class="x">echo strtolower(wp_title( &#39;&#39;, false));</span>
+</span><span class='line'><span class="x">if(wp_title(&#39; &#39;, false)) { echo &#39;. &#39;; }</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add the blog name.</span>
+</span><span class='line'><span class="x">bloginfo( &#39;name&#39; );</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add the blog description for the home/front page.</span>
+</span><span class='line'><span class="x">$site_description = get_bloginfo( &#39;description&#39;, &#39;display&#39; );</span>
+</span><span class='line'><span class="x">if ( $site_description &amp;amp;&amp;amp; ( is_home() || is_front_page() ) )</span>
+</span><span class='line'><span class="x">echo &quot; $site_description&quot;;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add a page number if necessary.</span>
+</span><span class='line'><span class="x">if ( $paged &amp;gt;= 2 || $page &amp;gt;= 2 )</span>
+</span><span class='line'><span class="x">echo &#39; &#39; . sprintf( __( &#39;page %s.&#39;, &#39;twentyten&#39; ), max( $paged, $page ) );</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Notice that I&#8217;m not using the <a href="http://codex.wordpress.org/Function_Reference/wp_title">wp_title $sep parameter</a> to create the period after the page name. This is because I do not want there to be extra spacing before the period, and the wp_title function will add that unwanted space if you give it a $sep value.</em></p>
+
+<h2>Trying to figure it out</h2>
+
+
+<p>For the image posts, this template uses <strong>figure</strong> and <strong>figcaption</strong> to display the image if there is a caption given. In the backend of WordPress, you simply add your <strong>figcaption</strong> copy in the &#8220;Caption&#8221; dialogue box.</p>
+
+<p><img src="http://spacekat.github.com/images/blog/screenshot-wp-caption.gif" width="607" height="461" title="Caption example" ></p>
+
+<p>I am experiencing a little glitch with this feature. When I edit the &#8220;Caption&#8221; text within the text editor, if I format the text in any way (such as making a word bold, or making a link) and save the post, the formatting is lost when the page refreshes. It&#8217;s not a critical problem right now, but I hope to get this fixed when I have a chance.</p>
+
+<h2>Font-face</h2>
+
+
+<p>I added <a href="http://typekit.com/">TypeKit&#8217;s</a> free font <strong>Museo Sans</strong> @font-face for the heading and button texts.</p>
+
+<h2>Hold on to your socks</h2>
+
+
+<p>I added a plugin called <strong>Hold Your Color</strong>, which allows you to tag your posts with colors.</p>
+
+<p><a href="http://wordpress.org/extend/plugins/hold-your-color/">http://wordpress.org/extend/plugins/hold-your-color/</a></p>
+
+<p>It also generates a color palette widget using hex-codes that you define. This palette can be used like a menu, which I did, so that users can navigate the posts by color.</p>
+
+<p>The documentation is a little difficult to understand for this plugin, because some of the terms are confusing. For example, the variable $bulls threw me off at first. &#8220;$bulls&#8221; are supposed to be &#8220;bullets&#8221; - but not HTML bullets as you might expect! They are actually href links that are styled into square color swatches.</p>
+
+<p>I had a serendipitous moment when I saw that this plugin developer is named <strong>Under-Warz</strong>. This made me happy, since socks are underwarz. Kind of.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rilakkuma in CSS3]]></title>
+    <link href="http://spacekat.github.com/blog/2010/12/14/rilakkuma-in-css3/"/>
+    <updated>2010-12-14T23:52:00-08:00</updated>
+    <id>http://spacekat.github.com/blog/2010/12/14/rilakkuma-in-css3</id>
+    <content type="html"><![CDATA[<p><img src="http://spacekat.github.com/images/blog/rilakkuma_screenshots.gif" width="630" height="269" title="Rilakkuma Screenshots" ></p>
+
+<p>I like how San-X characters (like Rilakkuma and Ko-Rilakkuma) are very simple, and yet manage to look very cute. It must be in the proportions (massive foreheads, wide-set eyes, etc.) and smooth shapes.</p>
+
+<p>I tried to recreate Rilakkuma’s face in using the CSS properties border-radius and transform.</p>
+
+<!--more-->
+
+
+<h2>Live demo</h2>
+
+<p>Here is Rilakkuma:</p>
+
+<iframe style="width: 100%; height: 500px" src="http://jsfiddle.net/kAaDP/embedded/result,html,css/light/"></iframe>
+
+
+<p>Of course I had to make his friend with the red button, Ko-Rilakkuma, too:</p>
+
+<iframe style="width: 100%; height: 500px" src="http://jsfiddle.net/UUZ9W/embedded/result,html,css/light/"></iframe>
+
+
+<h2>A curvy snout with border-radius</h2>
+
+<p>For Rilakkuma’s white snout, I used with the border-radius property to create the downward slope on the top curve.</p>
+
+<p>The radius values are defined clockwise, starting at the top-left corner. The first four values are the horizontal radii, and second four following the slash are the the vertical radii.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">border-radius</span><span class="o">:</span> <span class="nt">200px</span> <span class="nt">200px</span> <span class="nt">140px</span> <span class="nt">140px</span> <span class="o">/</span> <span class="nt">160px</span> <span class="nt">160px</span> <span class="nt">140px</span> <span class="nt">140px</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notice how the first two border-radius definitions (top-left and top-right, both 200px) are longer than the following two definitions (bottom-right and bottom-left, both140px)</p>
+
+<h2>Rotation points with transform</h2>
+
+<p>I used transform to make the upside-down “V”-shaped mouth. I made two rectangular lips, rounded their edges, and then rotated them at the nose. To define the rotation point, I used transform-origin. Then transform specifies the degrees.</p>
+
+<h2>Browser compatibility</h2>
+
+<p>These bears should work in current -webkit, -o, and -moz browsers, but sadly, not IE. It looks like IE9 beta should support it.</p>
+
+<p><em>Supported in:</em>
+Opera (version 10.5+)
+Safari (version 4+)
+Chrome (version 5+)
+Mozilla Firefox (version 1.0+)</p>
+
+<p>Here is an IE8 screenshot. Oh no, it’s Robo-Ko-Rilakkuma!
+<img src="http://spacekat.github.com/images/blog/ko-rilakkuma-ie8.gif" width="630" height="269" title="Rilakkuma Screenshots" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Useful Shortcuts for TextMate]]></title>
+    <link href="http://spacekat.github.com/blog/2010/12/12/useful-shortcuts-for-textmate/"/>
+    <updated>2010-12-12T01:07:00-08:00</updated>
+    <id>http://spacekat.github.com/blog/2010/12/12/useful-shortcuts-for-textmate</id>
+    <content type="html"><![CDATA[<p>These are the shortcuts that I use all the time.</p>
+
+<!--more-->
+
+
+<h2>TextMate shortcuts</h2>
+
+
+<p><strong>control+shift+W </strong>
+Wrap current selection in &lt;p&gt; tags.</p>
+
+<p><strong>fn+delete </strong>or <strong>control+d </strong>
+Forward delete. Useful for removing unwanted auto-completions.</p>
+
+<p><strong>control+shift+V </strong>
+Validate syntax.</p>
+
+<p><strong>command+E </strong> and <strong>command+G </strong>
+Copies selection to clipboard and finds next occurrence of the string, respectively.</p>
+
+<h2>Moving through files</h2>
+
+
+<p><strong>command+1 through 9</strong>
+Traverse the tabs in your project.</p>
+
+<p><strong>command+option+&lt; or &gt;</strong>
+Same as above, stepping left and right through the tabs.</p>
+
+<p><strong>command+T </strong>
+&#8220;Go to File&#8221; search box opens. Type file name for quick find.</p>
+
+<h2>Bookmarks</h2>
+
+
+<p>Click on the gutter of any line to add a bookmark to that line. A star icon will appear in the gutter. Now, after you&#8217;ve strayed from this undoubtedly important line of code, press <strong>F2</strong> and your caret* will jump to that line. You can add as many stars to the gutter as you want, and repetitively press <strong>F2</strong> to jump through them.</p>
+
+<p><em>*<strong>fun fact:</strong> The blinking-cursor-prompt is called a &#8220;caret.&#8221;</em></p>
+
+<p>And of course, the <a href="http://manual.macromates.com/en/">textmate manual</a> has great, easy to read documentation, covering much more.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cute Code Overload]]></title>
+    <link href="http://spacekat.github.com/blog/2010/08/26/cute-code-overload/"/>
+    <updated>2010-08-26T01:12:00-07:00</updated>
+    <id>http://spacekat.github.com/blog/2010/08/26/cute-code-overload</id>
+    <content type="html"><![CDATA[<h2>Have a sweet tooth for cute code?</h2>
+
+<h3>I have a TextMate theme for you.</h3>
+
+<p><img src="http://spacekat.github.com/images/blog/codecute2.jpeg" width="630" height="150" title="baby the code shines bright" ></p>
+
+<p>I love TextMate, and I liked some of the user submitted <a href="http://wiki.macromates.com/Themes/UserSubmittedThemes">custom themes</a>, but none of them really gave me the warm fuzzies that I was looking for in my text editor.</p>
+
+<!--more-->
+
+
+<p>So, I setup this theme, &#8220;Baby, The Code Shines Bright.&#8221;</p>
+
+<p>Download on <a href="https://github.com/spacekat/Baby-The-Code-Shines-Bright">GitHub</a>.</p>
+
+<h2>About this TextMate theme</h2>
+
+<p>The bright pastel color palette is inspired by the lolita dresses of Baby, The Stars Shine Bright.</p>
+
+<p>The selectors are based on the &#8220;Twilight&#8221; theme. The font is Monaco 12 pt. And it&#8217;s going to make your code look really, really cute.</p>
+
+<p>For information about how use this theme in TextMate, read the &#8220;Installing a New Theme&#8221; section on the TextMate wiki.</p>
+
+<h2>Screenshots</h2>
+
+<h3>JavaScript</h3>
+
+<p><img src="http://spacekat.github.com/images/blog/baby_codesample_js.gif" width="532" height="192" title="baby the code shines bright js code sample" ></p>
+
+<h3>CSS</h3>
+
+<p><img src="http://spacekat.github.com/images/blog/baby_codesample_css.gif" width="212" height="295" title="baby the code shines bright css code sample" ></p>
+
+<h3>HTML</h3>
+
+<p><img src="http://spacekat.github.com/images/blog/baby_codesample_html.gif" width="398" height="410" title="baby the code shines bright html code sample" ></p>
+
+<h2>Fonts &amp; Colors</h2>
+
+<p><img src="http://spacekat.github.com/images/blog/baby_colors.gif" width="450" height="988" title="baby the code shines bright html colors" ></p>
+]]></content>
+  </entry>
+  
+</feed>

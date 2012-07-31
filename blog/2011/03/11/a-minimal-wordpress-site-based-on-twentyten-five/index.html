@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A minimal WordPress site based on TwentyTen Five - jessica's blog</title>
+  <meta name="author" content="Jessica Allen">
+
+  
+  <meta name="description" content="This WordPress theme is used for www.sockcandy.com. For a recent WordPress blog that I designed, I used a free HTML5-enhanced basic template called &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://spacekat.github.com/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="jessica's blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:spacekat.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a class="logo" href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archive</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">A Minimal WordPress Site Based on TwentyTen Five</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-11T00:49:00-08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img src="/images/blog/sockcandy_screenshot.jpeg" width="630" height="425" title="Sock Candy screenshots" ></p>
+
+<p><em>This WordPress theme is used for <a href="http://www.sockcandy.com/">www.sockcandy.com</a>.</em></p>
+
+<p>For a recent WordPress blog that I designed, I used a free HTML5-enhanced basic template called <strong>TwentyTenFive</strong> as a starting point for the theme.</p>
+
+<!--more-->
+
+
+<h2>Resources</h2>
+
+
+<p>The <strong>TwentyTenFive</strong> theme is downloadable here: <a href="http://www.twentytenfive.com/">www.twentytenfive.com</a></p>
+
+<p>Here is a <a href="http://www.smashingmagazine.com/2011/02/22/using-html5-to-transform-wordpress-twentyten-theme/">Smashing Magazine article</a> describing the features of this theme.</p>
+
+<h2>Theme HTML changes</h2>
+
+
+<p>I only needed to make a few changes to the basic <strong>TwentyTenFive</strong> template files to adjust this default theme to the layout for my site. The major changes included removing the masthead (part of header.php), moving the sidebar to the left (in index.php), and customizing the menu systems in the sidebar (in sidebar.php).</p>
+
+<h2>Housekeeping</h2>
+
+
+<p>I went through and removed some of the unsavory default aspects of <strong>TwentyTen</strong>, such as the left and right HTML arrows (← →«»). Ew, gross!</p>
+
+<h2>Simple page titles</h2>
+
+
+<p>I changed the page &lt;title&gt; to lowercase, and formatted it so that it wouldn&#8217;t have any arrows or divider lines. The title displays like this:</p>
+
+<p><strong>page name. blog name. page number.</strong></p>
+
+<p>or, if you are on the homepage:</p>
+
+<p><strong>blog name. tagline. page number.</strong></p>
+
+<p>If you would like to do something similar, open the header.php file, and edit inside the &lt;title&gt; tag.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">/*</span>
+</span><span class='line'><span class="x">* Print the tag based on what is being viewed.</span>
+</span><span class='line'><span class="x">*/</span>
+</span><span class='line'><span class="x">global $page, $paged;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add the page name.</span>
+</span><span class='line'><span class="x">echo strtolower(wp_title( &#39;&#39;, false));</span>
+</span><span class='line'><span class="x">if(wp_title(&#39; &#39;, false)) { echo &#39;. &#39;; }</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add the blog name.</span>
+</span><span class='line'><span class="x">bloginfo( &#39;name&#39; );</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add the blog description for the home/front page.</span>
+</span><span class='line'><span class="x">$site_description = get_bloginfo( &#39;description&#39;, &#39;display&#39; );</span>
+</span><span class='line'><span class="x">if ( $site_description &amp;amp;&amp;amp; ( is_home() || is_front_page() ) )</span>
+</span><span class='line'><span class="x">echo &quot; $site_description&quot;;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">// Add a page number if necessary.</span>
+</span><span class='line'><span class="x">if ( $paged &amp;gt;= 2 || $page &amp;gt;= 2 )</span>
+</span><span class='line'><span class="x">echo &#39; &#39; . sprintf( __( &#39;page %s.&#39;, &#39;twentyten&#39; ), max( $paged, $page ) );</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Notice that I&#8217;m not using the <a href="http://codex.wordpress.org/Function_Reference/wp_title">wp_title $sep parameter</a> to create the period after the page name. This is because I do not want there to be extra spacing before the period, and the wp_title function will add that unwanted space if you give it a $sep value.</em></p>
+
+<h2>Trying to figure it out</h2>
+
+
+<p>For the image posts, this template uses <strong>figure</strong> and <strong>figcaption</strong> to display the image if there is a caption given. In the backend of WordPress, you simply add your <strong>figcaption</strong> copy in the &#8220;Caption&#8221; dialogue box.</p>
+
+<p><img src="/images/blog/screenshot-wp-caption.gif" width="607" height="461" title="Caption example" ></p>
+
+<p>I am experiencing a little glitch with this feature. When I edit the &#8220;Caption&#8221; text within the text editor, if I format the text in any way (such as making a word bold, or making a link) and save the post, the formatting is lost when the page refreshes. It&#8217;s not a critical problem right now, but I hope to get this fixed when I have a chance.</p>
+
+<h2>Font-face</h2>
+
+
+<p>I added <a href="http://typekit.com/">TypeKit&#8217;s</a> free font <strong>Museo Sans</strong> @font-face for the heading and button texts.</p>
+
+<h2>Hold on to your socks</h2>
+
+
+<p>I added a plugin called <strong>Hold Your Color</strong>, which allows you to tag your posts with colors.</p>
+
+<p><a href="http://wordpress.org/extend/plugins/hold-your-color/">http://wordpress.org/extend/plugins/hold-your-color/</a></p>
+
+<p>It also generates a color palette widget using hex-codes that you define. This palette can be used like a menu, which I did, so that users can navigate the posts by color.</p>
+
+<p>The documentation is a little difficult to understand for this plugin, because some of the terms are confusing. For example, the variable $bulls threw me off at first. &#8220;$bulls&#8221; are supposed to be &#8220;bullets&#8221; - but not HTML bullets as you might expect! They are actually href links that are styled into square color swatches.</p>
+
+<p>I had a serendipitous moment when I saw that this plugin developer is named <strong>Under-Warz</strong>. This made me happy, since socks are underwarz. Kind of.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jessica Allen</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-11T00:49:00-08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/html5/'>HTML5</a>, <a class='category' href='/blog/categories/templates/'>templates</a>, <a class='category' href='/blog/categories/wordpress/'>wordpress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://spacekat.github.com/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/" data-via="jessicaspacekat" data-counturl="http://spacekat.github.com/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/12/14/rilakkuma-in-css3/" title="Previous Post: Rilakkuma in CSS3">&laquo; Rilakkuma in CSS3</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/04/19/hi-there-coffeescript/" title="Next Post: Hi There CoffeeScript">Hi There CoffeeScript &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/10/coffeescript-a-go-go/">CoffeeScript A Go Go</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/19/hi-there-coffeescript/">Hi There CoffeeScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/">A minimal WordPress site based on TwentyTen Five</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/12/14/rilakkuma-in-css3/">Rilakkuma in CSS3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/12/12/useful-shortcuts-for-textmate/">Useful Shortcuts for TextMate</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("jessicaspacekat", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/jessicaspacekat" class="twitter-follow-button" data-show-count="false">Follow @jessicaspacekat</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div class="copyright">
+  <p>
+    Copyright &copy; 2012 - Jessica Allen
+  </p>
+</div>
+<div class="credits">
+  <p>
+    <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  </p>
+</div>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

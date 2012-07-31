@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: HTML5 | jessica's blog]]></title>
+  <link href="http://spacekat.github.com/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://spacekat.github.com/"/>
+  <updated>2012-07-31T16:20:37-07:00</updated>
+  <id>http://spacekat.github.com/</id>
+  <author>
+    <name><![CDATA[Jessica Allen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A minimal WordPress site based on TwentyTen Five]]></title>
+    <link href="http://spacekat.github.com/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five/"/>
+    <updated>2011-03-11T00:49:00-08:00</updated>
+    <id>http://spacekat.github.com/blog/2011/03/11/a-minimal-wordpress-site-based-on-twentyten-five</id>
+    <content type="html"><![CDATA[<p><img src="/images/blog/sockcandy_screenshot.jpeg" width="630" height="425" title="Sock Candy screenshots" ></p>
+
+<p><em>This WordPress theme is used for <a href="http://www.sockcandy.com/">www.sockcandy.com</a>.</em></p>
+
+<p>For a recent WordPress blog that I designed, I used a free HTML5-enhanced basic template called <strong>TwentyTenFive</strong> as a starting point for the theme.</p>
+
+<!--more-->
+
+
+<h2>Resources</h2>
+
+
+<p>The <strong>TwentyTenFive</strong> theme is downloadable here: <a href="http://www.twentytenfive.com/">www.twentytenfive.com</a></p>
+
+<p>Here is a <a href="http://www.smashingmagazine.com/2011/02/22/using-html5-to-transform-wordpress-twentyten-theme/">Smashing Magazine article</a> describing the features of this theme.</p>
+
+<h2>Theme HTML changes</h2>
+
+
+<p>I only needed to make a few changes to the basic <strong>TwentyTenFive</strong> template files to adjust this default theme to the layout for my site. The major changes included removing the masthead (part of header.php), moving the sidebar to the left (in index.php), and customizing the menu systems in the sidebar (in sidebar.php).</p>
+
+<h2>Housekeeping</h2>
+
+
+<p>I went through and removed some of the unsavory default aspects of <strong>TwentyTen</strong>, such as the left and right HTML arrows (← →«»). Ew, gross!</p>
+
+<h2>Simple page titles</h2>
+
+
+<p>I changed the page &lt;title&gt; to lowercase, and formatted it so that it wouldn't have any arrows or divider lines. The title displays like this:</p>
+
+<p><strong>page name. blog name. page number.</strong></p>
+
+<p>or, if you are on the homepage:</p>
+
+<p><strong>blog name. tagline. page number.</strong></p>
+
+<p>If you would like to do something similar, open the header.php file, and edit inside the &lt;title&gt; tag.</p>
+
+<p>``` php
+/<em>
+* Print the tag based on what is being viewed.
+</em>/
+global $page, $paged;</p>
+
+<p>// Add the page name.
+echo strtolower(wp_title( '', false));
+if(wp_title(' ', false)) { echo '. '; }</p>
+
+<p>// Add the blog name.
+bloginfo( 'name' );</p>
+
+<p>// Add the blog description for the home/front page.
+$site_description = get_bloginfo( 'description', 'display' );
+if ( $site_description &amp;&amp; ( is_home() || is_front_page() ) )
+echo " $site_description";</p>
+
+<p>// Add a page number if necessary.
+if ( $paged &gt;= 2 || $page &gt;= 2 )
+echo ' ' . sprintf( __( 'page %s.', 'twentyten' ), max( $paged, $page ) );
+```</p>
+
+<p><em>Notice that I'm not using the <a href="http://codex.wordpress.org/Function_Reference/wp_title">wp_title $sep parameter</a> to create the period after the page name. This is because I do not want there to be extra spacing before the period, and the wp_title function will add that unwanted space if you give it a $sep value.</em></p>
+
+<h2>Trying to figure it out</h2>
+
+
+<p>For the image posts, this template uses <strong>figure</strong> and <strong>figcaption</strong> to display the image if there is a caption given. In the backend of WordPress, you simply add your <strong>figcaption</strong> copy in the "Caption" dialogue box.</p>
+
+<p><img src="/images/blog/screenshot-wp-caption.gif" width="607" height="461" title="Caption example" ></p>
+
+<p>I am experiencing a little glitch with this feature. When I edit the "Caption" text within the text editor, if I format the text in any way (such as making a word bold, or making a link) and save the post, the formatting is lost when the page refreshes. It's not a critical problem right now, but I hope to get this fixed when I have a chance.</p>
+
+<h2>Font-face</h2>
+
+
+<p>I added <a href="http://typekit.com/">TypeKit's</a> free font <strong>Museo Sans</strong> @font-face for the heading and button texts.</p>
+
+<h2>Hold on to your socks</h2>
+
+
+<p>I added a plugin called <strong>Hold Your Color</strong>, which allows you to tag your posts with colors.</p>
+
+<p><a href="http://wordpress.org/extend/plugins/hold-your-color/">http://wordpress.org/extend/plugins/hold-your-color/</a></p>
+
+<p>It also generates a color palette widget using hex-codes that you define. This palette can be used like a menu, which I did, so that users can navigate the posts by color.</p>
+
+<p>The documentation is a little difficult to understand for this plugin, because some of the terms are confusing. For example, the variable $bulls threw me off at first. "$bulls" are supposed to be "bullets" - but not HTML bullets as you might expect! They are actually href links that are styled into square color swatches.</p>
+
+<p>I had a serendipitous moment when I saw that this plugin developer is named <strong>Under-Warz</strong>. This made me happy, since socks are underwarz. Kind of.</p>
+]]></content>
+  </entry>
+  
+</feed>
