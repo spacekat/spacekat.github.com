@@ -4,7 +4,7 @@
   <title><![CDATA[jessica's blog]]></title>
   <link href="http://spacekat.github.com/atom.xml" rel="self"/>
   <link href="http://spacekat.github.com/"/>
-  <updated>2012-11-07T09:57:40-08:00</updated>
+  <updated>2012-11-07T14:32:56-08:00</updated>
   <id>http://spacekat.github.com/</id>
   <author>
     <name><![CDATA[Jessica Allen]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[EY Graphics]]></title>
+    <link href="http://spacekat.github.com/blog/2012/11/07/ey-graphics/"/>
+    <updated>2012-11-07T13:09:00-08:00</updated>
+    <id>http://spacekat.github.com/blog/2012/11/07/ey-graphics</id>
+    <content type="html"><![CDATA[<h3>Found a bunch of expired ink for the large format printer at the office so this happened.</h3>
+
+<p>Here are some graphics I made for T-shirts and stickers at Engine Yard.
+Printed really big.</p>
+
+<h2>DevOps</h2>
+
+<p><em>For Rails Conf 2011</em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/web-dev-ops.jpg" title="DevOp" ></p>
+
+<p><em>Worn by the handsome Dr. Nic.</em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/nic-devops.jpg" title="Dr. Nic models" ></p>
+
+<h2>So Easy</h2>
+
+<h3>&#8230;your grandma could be the next color.app</h3>
+
+<p><em>For Rails Conf 2011</em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/web-so-easy.jpg" title="So Easy" ></p>
+
+<p><em>Printed on a classy blue T-shirt.</em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/so-easy-drinks.jpg" title="models" ></p>
+
+<h2>Trinidad</h2>
+
+<p><em>Logo design for <a href="https://github.com/trinidad/trinidad">Trinidad web server</a></em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/web-trinidad.jpg" title="Trinidad" ></p>
+
+<h2>Support World Tour</h2>
+
+<p><em>T-shirt graphic for the EY Support meetups</em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/web-world-tour.jpg" title="World Tour" ></p>
+
+<h2>Engine Yard Athletics</h2>
+
+<p><em>Sportsball team shirts for the <a href="http://dodgeball.github.com/">Octocat Dodgeball Invitational</a></em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/web-ey-athletics.jpg" title="EY Athletics" ></p>
+
+<h2>Engine Yard Labs</h2>
+
+<p><em>Concept graphic for Engine Yard Labs (the beta/edge developement zone.)</em></p>
+
+<p><img src="http://spacekat.github.com/images/blog/ey-graphics/web-ey-labs.png" title="EY Labs" ></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Design process: Node.js Chat App]]></title>
